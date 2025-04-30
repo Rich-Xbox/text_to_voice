@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text to Speech App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    textarea, select, input[type="range"], button {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🗣 Text to Speech</h2>
+    <textarea id="text" rows="4" placeholder="Enter text to speak..."></textarea>
+    <label for="voiceSelect">Choose Voice:</label>
+    <select id="voiceSelect"></select>
+    <label for="rate">Rate: <span id="rateValue">1</span></label>
+    <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+    <label for="pitch">Pitch: <span id="pitchValue">1</span></label>
+    <input type="range" id="pitch" min="0" max="2" value="1" step="0.1">
+    <button onclick="speak()">🔊 Speak</button>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
